@@ -1,3 +1,10 @@
+<?php
+
+include 'config.php'
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,114 +142,89 @@
             </tr>
         </thead>
         <tbody>
-            <tr class=" border-b ">
+            <?php 
+            $sql = 'SELECT * FROM equipes';
+            $req = mysqli_query($conn,$sql);
+            while($row = mysqli_fetch_row($req)){
+
+
+            ?>
+
+        <tr class=" border-b ">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex gap-x-5 items-center">
-                    <img src="media/a.png" alt="" class="w-10">
-                    <h2>Maroc</h2>
+                    <img src="<?php echo $row[1] ?>"  alt="" class="w-10">
+                    <h2><?php echo $row[2] ?></h2>
                 </th>
                 <td class="text-center px-6 py-4">
-                    0
+                <?php echo $row[7] ?>
                 </td>
                 <td class="text-center px-6 py-4">
-                    0
+                <?php echo $row[8] ?>
                 </td>
                 <td class="text-center px-6 py-4">
-                    0
+                <?php echo $row[9] ?>
                 </td>
                 <td class="text-center px-6 py-4">
-                    0
+                <?php echo $row[10] ?>
                 </td>
                 <td class="text-center px-6 py-4">
-                    0
+                <?php echo $row[11] ?>
                 </td>
                 <td class="text-center px-6 py-4">
-                    0
+                <?php echo $row[12] ?>
                 </td>
                 <td class="text-center px-6 py-4">
-                    0
+                <?php echo $row[13] ?>
+                </td>
+                <td>
+                <button class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full">
+                    Info
+                </button>
+  
+
+  <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+    
+    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+      
+      <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+        <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+        </svg>
+        <span class="text-sm">(Esc)</span>
+      </div>
+
+      
+      <div class="modal-content py-4 text-left px-6">
+        
+        <div class="flex justify-between items-center pb-3">
+          <p class="text-2xl font-bold">Simple Modal!</p>
+          <div class="modal-close cursor-pointer z-50">
+            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+              <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!--Body-->
+        <p>Modal content can go here</p>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"> </script>
                 </td>
             </tr>
-            <tr class=" border-b ">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex gap-x-5 items-center">
-                    <img src="media/a.png" alt="" class="w-10">
-                    <h2>Maroc</h2>
-                </th>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-            </tr>
-            <tr class=" border-b ">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex gap-x-5 items-center">
-                    <img src="media/a.png" alt="" class="w-10">
-                    <h2>Maroc</h2>
-                </th>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-            </tr>
-            <tr class=" border-b ">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex gap-x-5 items-center">
-                    <img src="media/a.png" alt="" class="w-10">
-                    <h2>Maroc</h2>
-                </th>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-                <td class="text-center px-6 py-4">
-                    0
-                </td>
-            </tr>
+
+            <?php
+            }
+            ?>
+
+            
+            
             
         </tbody>
     </table>
