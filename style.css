@@ -8,11 +8,11 @@
     font-family: 'brogte', sans-serif;
 }
 
-.modal {
-    transition: opacity 0.25s ease;
-}
 
-body.modal-active {
-    overflow-x: hidden;
-    overflow-y: visible !important;
+
+#allo {
+    background-image: url(media/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: red;
 }
