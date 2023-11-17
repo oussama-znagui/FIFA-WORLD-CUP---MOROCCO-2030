@@ -15,8 +15,8 @@
 let btnSubmit = document.getElementById('btnSubmit');
 
 btnSubmit.addEventListener("click", function (event) {
-    event.preventDefault()
+    console.log("efef")
 
-    grpoupes = document.querySelectorAll(".groupes");
-    grpoupes.style.display = 'none';
+    // grpoupes = document.querySelectorAll(".groupes");
+    // grpoupes.style.display = 'none';
 })

@@ -279,7 +279,15 @@ include 'config.php'
                 <?php echo $row[13] ?>
                 </td>
                 <td>
-                    <a href="info.php?id=<?php echo $row[0] ?>">info</a>
+                <button class="primary" onclick="window.dialog.showModal();">Open Dialog</button>
+
+<dialog id="dialog">
+	<h2>Heldddddddlo.</h2>
+    <p>A CSS-only modal based on the <a href="https://developer.mozilla.org/es/docs/Web/CSS/::backdrop" target="_blank">::backdrop</a> pseudo-class. Hope you find it helpful.</p>
+
+	
+	<button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
+</dialog>
                 </td>
             </tr>
 
