@@ -1,22 +1,18 @@
-// let btn = document.getElementById('ff');
-// console.log(btn);
+let btn = document.getElementById('btnSubmit');
+console.log(btn);
 
-// btn.forEach(function (ele) {
+btn.forEach(function (ele) {
 
-//     ele.addEventListener("click", function (event) {
-//         event.preventDefault()
-
-//         grpoupes = document.querySelectorAll(".groupes");
-//         grpoupes.style.display = 'none';
-//     })
-// });
+    ele.addEventListener("click", function (event) {
+        event.preventDefault()
 
 
-let btnSubmit = document.getElementById('btnSubmit');
+        var reauest = fetch('POST', "htttps")
 
-btnSubmit.addEventListener("click", function (event) {
-    console.log("efef")
 
-    // grpoupes = document.querySelectorAll(".groupes");
-    // grpoupes.style.display = 'none';
-})
+        grpoupes = document.querySelectorAll(".groupes");
+        grpoupes.style.display = 'none';
+    })
+});
+
+

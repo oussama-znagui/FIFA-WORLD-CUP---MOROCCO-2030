@@ -108,7 +108,7 @@ include 'config.php'
         </section>
         <section >
             <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-center py-10">Filter les groupes</h1>
-            <form action="" method = "POST" class="flex items-center justify-center gap-x-10">
+            <form id="btnSubmit" action="" method = "POST" class="flex items-center justify-center gap-x-10">
                 <label for="">Selectioner un groupe</label>
                 <select name="groupe" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-2.5">
                     <option value="1">Groupe A</option>
@@ -241,6 +241,9 @@ include 'config.php'
                 <th scope="col" class="px-6 py-3">
                 Points
                 </th>
+                <th scope="col" class="px-6 py-3">
+                Consulter
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -279,7 +282,9 @@ include 'config.php'
                 <?php echo $row[13] ?>
                 </td>
                 <td>
-                <button class="primary" onclick="window.dialog.showModal();">Open Dialog</button>
+                <a id = 'ff' href="info.php?id=<?php echo $row[0] ?>">info</a>
+
+                <!-- <button class="primary" onclick="window.dialog.showModal();">Open Dialog</button>
 
 <dialog id="dialog">
 	<h2>Heldddddddlo.</h2>
@@ -287,7 +292,7 @@ include 'config.php'
 
 	
 	<button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
-</dialog>
+</dialog> -->
                 </td>
             </tr>
 
@@ -335,6 +340,8 @@ include 'config.php'
                 <?php echo $row[13] ?>
                 </td>
                 <td>
+                <a id = 'ff' href="info.php?id=<?php echo $row[0] ?>">info</a>
+
                 </td>
             </tr>
 
@@ -380,6 +387,8 @@ include 'config.php'
                 <?php echo $row[13] ?>
                 </td>
                 <td>
+                <a id = 'ff' href="info.php?id=<?php echo $row[0] ?>">info</a>
+
                 </td>
             </tr>
 
@@ -425,6 +434,8 @@ include 'config.php'
                 <?php echo $row[13] ?>
                 </td>
                 <td>
+                <a id = 'ff' href="info.php?id=<?php echo $row[0] ?>">info</a>
+
                 </td>
             </tr>
 
@@ -470,6 +481,8 @@ include 'config.php'
                 <?php echo $row[13] ?>
                 </td>
                 <td>
+                <a id = 'ff' href="info.php?id=<?php echo $row[0] ?>">info</a>
+
                 </td>
             </tr>
 
@@ -515,6 +528,8 @@ include 'config.php'
                 <?php echo $row[13] ?>
                 </td>
                 <td>
+                <a id = 'ff' href="info.php?id=<?php echo $row[0] ?>">info</a>
+
                 </td>
             </tr>
 
@@ -560,6 +575,8 @@ include 'config.php'
                 <?php echo $row[13] ?>
                 </td>
                 <td>
+                <a id = 'ff' href="info.php?id=<?php echo $row[0] ?>">info</a>
+
                 </td>
             </tr>
 
@@ -604,7 +621,10 @@ include 'config.php'
                 <td class="text-center px-6 py-4">
                 <?php echo $row[13] ?>
                 </td>
+               
+
                 <td>
+                <a id = 'ff' href="info.php?id=<?php echo $row[0] ?>">info</a>
                     
                 </td>
             </tr>
